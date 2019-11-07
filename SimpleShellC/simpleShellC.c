@@ -16,7 +16,7 @@ char **to_array(char *input) {
     temp2 = strtok(input, " ");
     while (temp2 != 0) {
         count++;
-        temp1[count] = parsed;
+        temp1[count] = temp2;
         temp2 = strtok(0, " ");
     }
     temp1[count] = NULL;
