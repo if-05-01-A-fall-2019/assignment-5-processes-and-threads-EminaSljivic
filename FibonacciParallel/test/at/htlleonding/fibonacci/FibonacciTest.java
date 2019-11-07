@@ -65,19 +65,18 @@ public class FibonacciTest {
     
     @Test
     public void test3() {
-        assertEquals(3, Fibonacci.getNumberSingle(3));
+        assertEquals(3, Fibonacci.getNumberSingle(3));        
+        assertEquals(3, Fibonacci.getNumberParallel(3));
     }
     
     @Test
     public void test4() {
         assertEquals(5, Fibonacci.getNumberSingle(4));
+        assertEquals(5, Fibonacci.getNumberParallel(4));
     }
     
     @Test
-    @Ignore
     public void testLarge() {
         assertEquals(1_836_311_903, Fibonacci.getNumberSingle(N));
     }
-    
-    public void testParallel
 }

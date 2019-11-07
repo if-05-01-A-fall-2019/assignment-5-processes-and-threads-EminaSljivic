@@ -28,6 +28,8 @@ package at.htlleonding.fibonacci;
  * @author P. Bauer <p.bauer@htl-leonding.ac.at>
  */
 public class Fibonacci {
+    
+    private static int count=1;
 
     static int getNumberSingle(int n) {
         if (n < 2)
@@ -41,10 +43,16 @@ public class Fibonacci {
 
             @Override
             public void run() {
-                
+                count++;
             }
             
         });
+        if(n<2){
+            t1.start();
+        }
+        else{
+            return getNumberParallel(n-2)+getNumberParallel(n-1);
+        }
         return 1;
     }
     
