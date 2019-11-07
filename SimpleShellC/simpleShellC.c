@@ -9,19 +9,19 @@
 
 
 char **to_array(char *input) {
-    char **command = malloc(10 * sizeof(char *));
-    char *parsed;
-    int i = 0;
+  int count = 0;
+    char **temp1 = malloc(10 * sizeof(char *));
+    char *temp2;
 
-    parsed = strtok(input, " ");
-    while (parsed != 0) {
-        command[i] = parsed;
-        parsed = strtok(0, " ");
-        i++;
+    temp2 = strtok(input, " ");
+    while (temp2 != 0) {
+        count++;
+        temp1[count] = parsed;
+        temp2 = strtok(0, " ");
     }
+    temp1[count] = NULL;
 
-    command[i] = NULL;
-    return command;
+    return temp1;
 }
 
 int main(int argc, char const *argv[]) {
